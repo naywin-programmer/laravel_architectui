@@ -3,6 +3,9 @@
 namespace App\Exceptions;
 
 use Exception;
+use App\Helper\ResponseHelper;
+use Illuminate\Auth\AuthenticationException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -46,6 +49,33 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        if ($exception instanceof ModelNotFoundException) {
+            return ResponseHelper::fail([], 'No Data Found.');
+        }
+
+        if ($exception instanceof \Spatie\Permission\Exceptions\UnauthorizedException) {
+            abort(403, "Permission Denied.");
+        }
+
         return parent::render($request, $exception);
+    }
+
+    protected function unauthenticated($request, AuthenticationException $exception)
+    {
+        if ($request->expectsJson()) {
+            return response()->json(['message' => $exception->getMessage()], 401);
+        }
+
+        $guard = ($exception->guards())[0];
+
+        switch ($guard) {
+            case 'admin':
+                $login = 'admin.login';
+                break;
+            default:
+                $login = 'login';
+                break;
+        }
+        return redirect()->guest(route($login));
     }
 }

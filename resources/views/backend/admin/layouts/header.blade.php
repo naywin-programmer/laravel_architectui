@@ -81,10 +81,14 @@
                         </div>
                         <div class="widget-content-left  ml-3 header-user-info">
                             <div class="widget-heading">
+                                @auth
                                 {{ auth()->guard('admin')->user()->name }}
+                                @endauth
                             </div>
                             <div class="widget-subheading">
+                                @auth
                                 {{ join(', ', auth()->guard('admin')->user()->getRoleNames()->toArray()) }}
+                                @endauth
                             </div>
                         </div>
                         <div class="widget-content-right header-user-info ml-3">

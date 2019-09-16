@@ -54,7 +54,7 @@ class Handler extends ExceptionHandler
         }
 
         if ($exception instanceof \Spatie\Permission\Exceptions\UnauthorizedException) {
-            abort(403, "Permission Denied.");
+            abort(403, 'Access Denied.');
         }
 
         return parent::render($request, $exception);

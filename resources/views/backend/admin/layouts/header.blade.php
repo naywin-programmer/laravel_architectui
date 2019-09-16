@@ -75,7 +75,13 @@
                                     <h6 tabindex="-1" class="dropdown-header">Header</h6>
                                     <button type="button" tabindex="0" class="dropdown-item">Actions</button>
                                     <div tabindex="-1" class="dropdown-divider"></div>
-                                    <button type="button" tabindex="0" class="dropdown-item">Dividers</button>
+                                    <button type="button" tabindex="0" class="dropdown-item" onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">Log Out</button>
+
+                                    {{-- Log Out Form --}}
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
                                 </div>
                             </div>
                         </div>

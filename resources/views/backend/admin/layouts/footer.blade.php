@@ -5,9 +5,9 @@
                 <ul class="nav">
                     <li class="nav-item">
                         <a href="{{ route('admin.index') }}">
-                            Architect Ui
+                            {{config('app.name')}}
                         </a>
-                        , Copyright &copy; 2019. All right reserved.
+                        , Copyright &copy; {{date('Y')}}. All right reserved.
                     </li>
                 </ul>
             </div>

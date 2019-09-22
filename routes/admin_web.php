@@ -11,6 +11,19 @@ Route::name('admin.')
 
     Route::middleware(['auth:admin'])->group(function () {
         Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
+
+        Route::resource('permissions', 'PermissionsController')->only('index');
+
+        Route::resource('roles', 'RolesController');
+
+        Route::resource('admin-users', 'AdminUsersController');
+        Route::put('/admin-users/{admin_user}/trash', 'AdminUsersController@trash')->name('admin-users.trash');
+        Route::put('/admin-users/{admin_user}/restore', 'AdminUsersController@restore')->name('admin-users.restore');
+
+        Route::resource('client-users', 'ClientUsersController');
+        Route::put('/client-users/{client_user}/trash', 'ClientUsersController@trash')->name('client-users.trash');
+        Route::put('/client-users/{client_user}/restore', 'ClientUsersController@restore')->name('client-users.restore');
+
         Route::get('/', 'IndexController@index')->name('index');
     });
 

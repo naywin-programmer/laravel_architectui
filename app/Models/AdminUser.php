@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\Trash;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -10,7 +11,7 @@ use Spatie\Permission\Traits\HasRoles;
 
 class AdminUser extends Authenticatable
 {
-    use Notifiable, HasRoles;
+    use Notifiable, HasRoles, Trash;
 
     protected $guard_name = 'admin';
 
@@ -20,10 +21,8 @@ class AdminUser extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'trash'
     ];
-
-    protected $dates = ['deleted_at'];
 
     /**
      * The attributes that should be hidden for arrays.

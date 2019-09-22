@@ -4,7 +4,7 @@ namespace App\Helper;
 
 class ResponseHelper
 {
-    public static function success($data, $message = 'success')
+    public static function success($data = [], $message = 'success')
     {
         return response()->json([
             'result' => 1,
@@ -13,7 +13,7 @@ class ResponseHelper
         ]);
     }
 
-    public static function fail($data, $message = 'fail')
+    public static function fail($data = [], $message = 'fail')
     {
         return response()->json([
             'result' => 0,

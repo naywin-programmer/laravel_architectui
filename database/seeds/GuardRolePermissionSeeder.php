@@ -1,6 +1,6 @@
 <?php
 
-use Spatie\Permission\Models\{
+use App\Models\{
     Role,
     Permission,
 };

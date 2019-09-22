@@ -25,8 +25,7 @@
     <title>@yield('meta_title') | {{ config('app.name') }}</title>
     <meta name="description" content="@yield('meta_desc')">
 
-    <link href="{{ asset('vendor/assets/css/main.css') }}" rel="stylesheet">
-    @yield('style')
+    @include('backend.admin.layouts.assets.css')
 </head>
 
 <body>
@@ -44,9 +43,8 @@
             </div>
         </div>
     </div>
-    <script src="{{ asset('vendor/assets/scripts/main.js') }}"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    @yield('script')
+    
+    @include('backend.admin.layouts.assets.js')
 </body>
 
 </html>

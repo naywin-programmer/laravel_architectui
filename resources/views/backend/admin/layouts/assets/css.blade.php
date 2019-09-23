@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="{{ asset('vendor/assets/css/main.css') }}">
+<link rel="stylesheet" href="{{ asset('vendor/assets/css/lib.css') }}">
 <link rel="stylesheet" href="{{ asset('fonts/vendor/fontawesome/css/all.min.css') }}">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />

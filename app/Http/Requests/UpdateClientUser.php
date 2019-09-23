@@ -24,7 +24,8 @@ class UpdateClientUser extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|string|max:160',
+            'email' => 'required|unique:users,email,' . $this->route('client_user')->id,
         ];
     }
 }

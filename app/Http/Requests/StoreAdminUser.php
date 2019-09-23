@@ -24,7 +24,7 @@ class StoreAdminUser extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
+            'name' => 'required|string|max:160|unique:admin_users',
             'email' => 'required|unique:admin_users',
             'password' => 'required|min:8'
         ];

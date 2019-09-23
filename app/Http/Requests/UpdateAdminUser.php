@@ -24,7 +24,8 @@ class UpdateAdminUser extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|string|max:160|unique:admin_users,name,'  . $this->route('admin_user')->id,
+            'email' => 'required|unique:admin_users,email,' . $this->route('admin_user')->id,
         ];
     }
 }

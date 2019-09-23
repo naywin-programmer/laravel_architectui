@@ -13,7 +13,7 @@
         <label class="custom-control-label" for="trashswitch"><strong>Trash</strong></label>
     </div>
 
-    {{-- @can('add_admin_user') --}}
+    {{-- @can('add_user') --}}
     <a href="{{route('admin.client-users.create')}}" title="Add User" class="btn btn-primary action-btn">Add User</a>
     {{-- @endcan --}}
 </div>

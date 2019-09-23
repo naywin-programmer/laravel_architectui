@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Yajra\DataTables\DataTables;
 use App\Models\{Role, Permission};
+use App\Http\Requests\{StoreRole, UpdateRole};
 
 class RolesController extends Controller
 {
@@ -102,7 +103,7 @@ class RolesController extends Controller
             'name' => $request->name
         ]);
         if($updated) {
-            $updated->syncPermissions($request->permissions);
+            $role->syncPermissions($request->permissions);
             return redirect(config('app.prefix_admin_url') . '/admin/roles?guard=' . $request->guard)->with('success', 'Successfully Updated.');    
         }
         return back()->withErrors(['error' => 'Role Update Failed !'])->withInput();

@@ -12,7 +12,7 @@
     <div class="col-md-12">
         <div class="main-card mb-3 card">
             <div class="card-body">
-                <form action="{{ route('admin.admin-users.update', ['admin_user' => $admin_user->id]) }}" method="post">
+                <form action="{{ route('admin.admin-users.update', ['admin_user' => $admin_user->id]) }}" method="post" id="form">
                     @csrf
                     @method('PUT')
 
@@ -63,4 +63,8 @@
     </div>
 </div>
 
+@endsection
+
+@section('script')
+{!! JsValidator::formRequest('App\Http\Requests\UpdateAdminUser', '#form') !!}
 @endsection

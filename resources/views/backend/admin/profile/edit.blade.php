@@ -1,7 +1,7 @@
 @extends('backend.admin.layouts.app')
 
-@section('meta_title', 'Admin Users')
-@section('page_title', 'Admin Users')
+@section('meta_title', 'Edit Profile')
+@section('page_title', 'Edit Profile')
 
 @section('content')
 

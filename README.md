@@ -9,10 +9,10 @@
 ### To Use
 - create .env file
 - create database
+- composer install
 - php artisan key:generate
 - npm install
 - npm run dev
-- composer install
 - php artisan migrate:refresh
 - php artisan passport:install
 - php artisan db:seed

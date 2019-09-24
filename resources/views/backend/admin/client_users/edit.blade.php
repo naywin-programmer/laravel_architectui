@@ -53,7 +53,7 @@
                     <div class="row">
                         <div class="col-md-12 text-center">
                             <a href="{{ route('admin.client-users.index') }}" class="btn btn-danger mr-5">Cancel</a>
-                            <input type="submit" value="Create" class="btn btn-success">
+                            <input type="submit" value="Update" class="btn btn-success">
                         </div>
                     </div>
 

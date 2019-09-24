@@ -12,7 +12,7 @@ Route::name('admin.')
     Route::middleware(['auth:admin'])->group(function () {
         Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 
-        Route::resource('permissions', 'PermissionsController')->only('index');
+        Route::resource('permissions', 'PermissionsController')->only(['index', 'create', 'store']);
 
         Route::resource('roles', 'RolesController');
 

@@ -34,17 +34,23 @@ if(request('guard') == 'admin') {
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="" class="d-block">Permissions</label>
+                                <div class="row">
                                 @forelse($permissions as $permission)
-                                <div class="form-check form-check-inline mt-2">
-                                    <div class="chiller_cb">
-                                        <input id="{{$permission->name}}" type="checkbox" name="permissions[]" value="{{$permission->name}}" />
-                                        <label for="{{$permission->name}}" class="h6">{{$permission->name}}</label>
-                                        <span></span>
+                                    <div class="col-md-3">
+                                        <div class="form-check form-check-inline mt-2">
+                                            <div class="chiller_cb">
+                                                <input id="{{$permission->name}}" type="checkbox" name="permissions[]" value="{{$permission->name}}" />
+                                                <label for="{{$permission->name}}" class="h6">{{$permission->name}}</label>
+                                                <span></span>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
                                 @empty
-                                    <p class="text text-danger">No Permission Found.</p>
+                                    <div class="col-md-12">
+                                        <p class="text text-danger">No Permission Found.</p>
+                                    </div>
                                 @endforelse
+                                </div>
                             </div>
                         </div>
                     </div>

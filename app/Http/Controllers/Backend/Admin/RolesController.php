@@ -64,7 +64,7 @@ class RolesController extends Controller
             $created->syncPermissions($request->permissions);
             return redirect(config('app.prefix_admin_url') . '/admin/roles?guard=' . $request->guard)->with('success', 'New Role Successfully Created.');
         }
-        return back()->withErrors(['error' => 'New Role Create Failed !'])->withInput();
+        return back()->with('error', 'New Role Create Failed !')->withInput();
     }
 
     /**
@@ -106,7 +106,7 @@ class RolesController extends Controller
             $role->syncPermissions($request->permissions);
             return redirect(config('app.prefix_admin_url') . '/admin/roles?guard=' . $request->guard)->with('success', 'Successfully Updated.');    
         }
-        return back()->withErrors(['error' => 'Role Update Failed !'])->withInput();
+        return back()->with('error', 'Role Update Failed !')->withInput();
     }
 
     /**

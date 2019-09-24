@@ -13,13 +13,19 @@ $(function() {
         type: 'success',
         title: '{{ session("success") }}'
     })
+    @php
+    Session::forget('success');
+    @endphp
     @endif
 
     @if(session('error'))
     Toast.fire({
-        type: 'danger',
+        type: 'error',
         title: '{{ session("error") }}'
     })
+    @php
+    Session::forget('error');
+    @endphp
     @endif
 });
 </script>

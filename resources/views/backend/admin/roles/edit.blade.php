@@ -52,7 +52,7 @@ if(request('guard') == 'admin') {
                     <div class="row">
                         <div class="col-md-12 text-center">
                             <a href="{{ route('admin.roles.index') }}?guard={{request('guard')}}" class="btn btn-danger mr-5">Cancel</a>
-                            <input type="submit" value="Add" class="btn btn-success">
+                            <input type="submit" value="Update" class="btn btn-success">
                         </div>
                     </div>
                 </form>

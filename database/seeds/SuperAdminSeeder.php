@@ -14,7 +14,7 @@ class SuperAdminSeeder extends Seeder
      */
     public function run()
     {
-        $created = AdminUser::create([
+        $created = AdminUser::firstOrCreate([
             'name' => 'Super Admin',
             'email' => 'admin_' . Str::slug(Str::lower(config('app.name')), '_') . '@gmail.com',
             'password' => Hash::make('password')

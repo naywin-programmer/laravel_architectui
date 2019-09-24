@@ -6,6 +6,14 @@
 <i class="metismenu-icon pe-7s-door-lock"></i>
 @endsection
 
+@section('page_title_buttons')
+<div class="d-flex justify-content-end">
+    {{-- @can('add_permission') --}}
+    <a href="{{route('admin.permissions.create')}}" title="Add Permission" class="btn btn-primary action-btn">Add Permission</a>
+    {{-- @endcan --}}
+</div>
+@endsection
+
 @section('content')
 
 <div class="row">

@@ -25,3 +25,19 @@
 
 ### To create Permission and Role from Terminal (Laravel Permission)
 https://docs.spatie.be/laravel-permission/v3/basic-usage/artisan/
+
+### Screenshots
+![Admin Login Screen](https://user-images.githubusercontent.com/21998283/65568567-5f593300-df80-11e9-9342-eb8c94502f53.png)
+---
+![Admin Home Screen](https://user-images.githubusercontent.com/21998283/65568601-7b5cd480-df80-11e9-99be-794628c2dcf2.png)
+---
+![User Screen](https://user-images.githubusercontent.com/21998283/65568787-0c33b000-df81-11e9-83de-45f853ffbd42.png)
+---
+![Admin User Screen](https://user-images.githubusercontent.com/21998283/65568815-1ce42600-df81-11e9-858d-ba16844fce12.png)
+---
+![User Role Screen](https://user-images.githubusercontent.com/21998283/65568840-308f8c80-df81-11e9-8609-15a5e1ec201d.png)
+---
+![Admin User Role Screen](https://user-images.githubusercontent.com/21998283/65568862-3d13e500-df81-11e9-8f3d-ea23f38221f0.png)
+---
+![Permission Screen](https://user-images.githubusercontent.com/21998283/65568870-44d38980-df81-11e9-9b7e-4d7d0c6acb7c.png)
+---

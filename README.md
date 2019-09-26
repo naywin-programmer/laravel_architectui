@@ -5,6 +5,7 @@
 - Laravel Permission v3.0
 - Laravel Datatable v9.6.0
 - Laravel JsValidation v2.5.0
+- Laravel Mix Purgecss v4.1.0
 
 ### To Use
 - create .env file

@@ -18,6 +18,55 @@
 - php artisan passport:install
 - php artisan db:seed
 
+### Custom Admin Route File
+- for admin routes, you can write admin routes in this file
+```
+routes/admin_web.php
+```
+- if you want more seperated route files, you can edit in **Laravel build-in RouteServiceProvider.php** file
+```php
+// for web
+protected function mapWebRoutes()
+{
+    Route::middleware('web')
+         ->namespace($this->namespace)
+         ->group(function () {
+            require base_path('routes/web.php');
+            require base_path('routes/admin_web.php');
+        });
+}
+
+// for api
+protected function mapApiRoutes()
+{
+    Route::prefix('api')
+         ->middleware('api')
+         ->namespace($this->namespace)
+         ->group(base_path('routes/api.php'));
+}
+```
+
+### Admin Dashboard Url
+##### Default
+```
+http://127.0.0.1:8000/admin
+```
+##### Custom Prefix Name For Admin Dashboard (edit in **.env** or **config/app.php**)
+- set **PREFIX_ADMIN_URL** in **.env**
+```
+PREFIX_ADMIN_URL=backend
+```
+- now Admin Dashboard Url is
+```
+http://127.0.0.1:8000/backend/admin
+```
+
+### Admin Account (in SuperAdminSeeder.php file)
+```
+email: admin@laravelarchitectui.com
+password: password
+```
+
 ### To create default guards, roles, permissions for Laravel Permission by using seeder
 - config/custom_guards.php
 - config/custom_roles.php

@@ -1,4 +1,4 @@
-<div class="app-header header-shadow">
+<div class="app-header header-shadow bg-asteroid header-text-light">
     <div class="app-header__logo">
         <div class="logo-src"></div>
         <div class="header__pane ml-auto">

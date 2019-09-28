@@ -29,7 +29,7 @@
 </head>
 
 <body>
-    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header ">
         @include('backend.admin.layouts.header')
 
         <div class="app-main">

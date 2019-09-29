@@ -54,7 +54,7 @@ http://127.0.0.1:8000/admin
 ##### Custom Prefix Name For Admin Dashboard (edit in **.env** or **config/app.php**)
 - set **PREFIX_ADMIN_URL** in **.env**
 ```
-PREFIX_ADMIN_URL=backend
+PREFIX_ADMIN_URL=/backend
 ```
 - now Admin Dashboard Url is
 ```

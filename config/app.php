@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     |
     */
-    'prefix_admin_url' => env('PREFIX_ADMIN_URL', 'backend'),
+    'prefix_admin_url' => env('PREFIX_ADMIN_URL', '/backend'),
 
     'name' => env('APP_NAME', 'Laravel'),
 

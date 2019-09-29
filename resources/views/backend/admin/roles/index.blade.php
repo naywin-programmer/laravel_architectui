@@ -84,7 +84,7 @@ $(function() {
     $(document).on('click', '.destroy', function() {
         var id = $(this).data('id');
         $.ajax({
-            url: `/${PREFIX_URL}/admin/roles/${id}`,
+            url: `${PREFIX_URL}/admin/roles/${id}`,
             method: 'DELETE',
             data: {'_token': CSRF_TOKEN},
             success: function(data) {

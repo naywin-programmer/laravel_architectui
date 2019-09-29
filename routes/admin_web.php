@@ -24,6 +24,10 @@ Route::name('admin.')
         Route::put('/client-users/{client_user}/trash', 'ClientUsersController@trash')->name('client-users.trash');
         Route::put('/client-users/{client_user}/restore', 'ClientUsersController@restore')->name('client-users.restore');
 
+        Route::resource('categories', 'CategoriesController');
+        Route::put('/categories/{category}/trash', 'CategoriesController@trash')->name('categories.trash');
+        Route::put('/categories/{category}/restore', 'CategoriesController@restore')->name('categories.restore');
+
         Route::get('/', 'IndexController@index')->name('index');
     });
 

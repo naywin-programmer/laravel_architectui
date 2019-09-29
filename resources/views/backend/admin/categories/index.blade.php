@@ -1,9 +1,9 @@
 @extends('backend.admin.layouts.app')
 
-@section('meta_title', 'Users')
-@section('page_title', 'Users')
+@section('meta_title', 'Categories')
+@section('page_title', 'Categories')
 @section('page_title_icon')
-<i class="metismenu-icon pe-7s-users"></i>
+<i class="pe-7s-menu icon-gradient bg-ripe-malin"></i>
 @endsection
 
 @section('page_title_buttons')
@@ -13,8 +13,8 @@
         <label class="custom-control-label" for="trashswitch"><strong>Trash</strong></label>
     </div>
 
-    {{-- @can('add_user') --}}
-    <a href="{{route('admin.client-users.create')}}" title="Add User" class="btn btn-primary action-btn">Add User</a>
+    {{-- @can('add_category') --}}
+    <a href="{{route('admin.categories.create')}}" title="Add Category" class="btn btn-primary action-btn">Add Category</a>
     {{-- @endcan --}}
 </div>
 @endsection
@@ -30,9 +30,11 @@
                         <thead>
                             <tr>
                                 <th></th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Roles</th>
+                                <th>Name (Burmese)</th>
+                                <th>Name (English)</th>
+                                <th>Link (Slug)</th>
+                                <th>Rank</th>
+                                <th>Main Category</th>
                                 <th class="no-sort action">Action</th>
                                 <th class="d-none hidden">Updated at</th>
                             </tr>
@@ -49,7 +51,7 @@
 
 @section('script')
 <script>
-var route_model_name = "client-users";
+var route_model_name = "categories";
 var app_table;
 $(function() {
     app_table = $('.data-table').DataTable({
@@ -58,14 +60,16 @@ $(function() {
         ajax: `${PREFIX_URL}/admin/${route_model_name}?trash=0`,
         columns: [
             {data: "plus-icon", name: "plus-icon", defaultContent: null},
-            {data: 'name', name: 'name', defaultContent: "-", class: ""},
-            {data: 'email', name: 'email', defaultContent: "-", class: ""},
-            {data: 'roles', name: 'roles', defaultContent: "-", class: ""},
+            {data: 'name_my', name: 'name_my', defaultContent: "-", class: ""},
+            {data: 'name_en', name: 'name_en', defaultContent: "-", class: ""},
+            {data: 'slug', name: 'slug', defaultContent: "-", class: ""},
+            {data: 'rank', name: 'rank', defaultContent: "-", class: ""},
+            {data: 'parent_id', name: 'parent_id', defaultContent: "-", class: ""},
             {data: 'action', name: 'action', orderable: false, searchable: false},
             {data: 'updated_at', name: 'updated_at', defaultContent: null}
         ],
         order: [
-            [5, 'desc']
+            [4, 'asc']
         ],
         responsive: {
             details: {type: "column", target: 0}

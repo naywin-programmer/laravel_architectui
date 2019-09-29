@@ -39,6 +39,13 @@
                         Home
                     </a>
                 </li>
+                <li class="app-sidebar__heading">Products & Categories</li>
+                <li>
+                    <a href="{{route('admin.categories.index')}}" class="sidebar-item">
+                        <i class="metismenu-icon pe-7s-menu"></i>
+                        Categories
+                    </a>
+                </li>
                 <li class="app-sidebar__heading">User Management</li>
                 <li>
                     <a href="{{route('admin.client-users.index')}}" class="sidebar-item">

@@ -26,7 +26,6 @@ class StoreCategory extends FormRequest
         return [
             'name_my' => 'required',
             'name_en' => 'required',
-            'link' => 'nullable|unique:catgories'
         ];
     }
 

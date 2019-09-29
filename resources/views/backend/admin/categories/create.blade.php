@@ -18,14 +18,14 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="name_my">Name (Burmese)</label>
-                                <input type="text" name="name_my" id="name_my" class="form-control" autofocus>
+                                <input type="text" name="name_my" id="name_my" class="form-control" value="{{old('name_my')}}" autofocus>
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="name_en">Name (English)</label>
-                                <input type="text" name="name_en" id="name_en" class="form-control">
+                                <input type="text" name="name_en" id="name_en" class="form-control" value="{{old('name_en')}}">
                             </div>
                         </div>
 

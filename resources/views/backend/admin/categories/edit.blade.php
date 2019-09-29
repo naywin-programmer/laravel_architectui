@@ -24,14 +24,14 @@ $encoded = json_decode($category->name);
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="name_my">Name (Burmese)</label>
-                                <input type="text" name="name_my" id="name_my" class="form-control" value="{{$encoded->my}}" autofocus>
+                                <input type="text" name="name_my" id="name_my" class="form-control" value="{{old('name_my') ?? $encoded->my}}" autofocus>
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="name_en">Name (English)</label>
-                                <input type="text" name="name_en" id="name_en" class="form-control" value="{{$encoded->en}}">
+                                <input type="text" name="name_en" id="name_en" class="form-control" value="{{old('name_en') ?? $encoded->en}}">
                             </div>
                         </div>
 

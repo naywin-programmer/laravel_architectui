@@ -91,3 +91,4 @@ https://docs.spatie.be/laravel-permission/v3/basic-usage/artisan/
 ---
 ![Permission Screen](https://user-images.githubusercontent.com/21998283/65568870-44d38980-df81-11e9-9b7e-4d7d0c6acb7c.png)
 ---
+![Categories Screen](https://user-images.githubusercontent.com/21998283/65838255-4a392700-e327-11e9-9662-47d657d27876.png)

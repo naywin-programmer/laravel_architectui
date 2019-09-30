@@ -1,4 +1,5 @@
 $(function() {
+    const ps = new PerfectScrollbar('.scrollbar-sidebar');
     let path = window.location.href;
     $('a.sidebar-item').removeClass('mm-active');
     $("a.sidebar-item").each(function () {

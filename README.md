@@ -7,6 +7,11 @@
 - Laravel JsValidation v2.5.0
 - Laravel Mix Purgecss v4.1.0
 
+### Download
+```
+git clone https://github.com/naywin-programmer/laravel_architectui.git your_project_name
+```
+
 ### To Use
 - create .env file
 - create database

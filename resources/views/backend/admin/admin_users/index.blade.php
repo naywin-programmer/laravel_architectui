@@ -49,7 +49,7 @@
 
 @section('script')
 <script>
-var route_model_name = "client-users";
+var route_model_name = "admin-users";
 var app_table;
 $(function() {
     app_table = $('.data-table').DataTable({
